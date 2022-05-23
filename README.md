@@ -29,9 +29,9 @@ exercise_modalities
 │   │   │   c18orf25_phospho.txt
 │   │   │   c18orf25_protein.txt
 │   │   │   human_SPS_v2.RData
-│   │   │   Phospho (STY)Sites_Filter.xlsx
-│   │   │   Physiological individual data - teto-USE THIS.xlsx
-│   │   │   proteinGroups_filterRename.txt
+│   │   │   human_phospho.xlsx
+│   │   │   human_trait.xlsx
+│   │   │   human_protein.txt
 │   │
 │   └───export/
 │       │
@@ -70,13 +70,14 @@ exercise_modalities
 
 ## Input data
 
-[INSERT DESCRIPTION OF ALL INPUT TABLES > ANY PRE-PROCESSING?]
-
-| filename                  | description                               |
-| -------------             | -------------                             |
-| c18orf25_phospho.txt      | c18orf25 knockdown phosphoproteomics data |
-| c18orf25_protein.txt      | c18orf25 knockdown proteomics data        |
-| human_SPS_v2.RData        | object containing human phosphosites      |
+| filename                  | description                                                                                   |
+| -------------             | -------------                                                                                 |
+| human_phospho.xlsx        | human exercise phosphoproteomic data                                                          |
+| human_protein.txt         | human exercise proteomic data                                                                 |
+| human_trait.xlsx          | human plasma metabolites and muscle glycogen content                                          |
+| c18orf25_phospho.txt      | c18orf25 wild-type vs knockdown knockout with or without stimulation phosphoproteomic data    |
+| c18orf25_protein.txt      | c18orf25 knockdown wild-type vs knockout proteomics data                                      |
+| human_SPS_v2.RData        | object containing human phosphosites                                                          |
 
 <br>
 
@@ -99,6 +100,7 @@ exercise_modalities
 
 ### `c18orf25_phosphosite`
 * Limma DE results (phospho_grand_DE.txt)
+* Kinase enrichment analysis plots
 
 ### `c18orf25_protein`
 * Limma DE results (prot_grand_DE.txt)
@@ -114,4 +116,4 @@ exercise_modalities
 <br>
 
 ## Contact
-For more information, please contact Benjamin L. Parker (myemail@unimelb.edu.au).
+For more information, please contact Benjamin L. Parker (ben.parker@unimelb.edu.au).

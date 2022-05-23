@@ -94,3 +94,14 @@ kinaseAnnotation[idx] <- kinases[sites[idx]]
 grand.tab <- cbind(tab, c1.tab, c2.tab, c3.tab, kinaseAnnotation)
 
 write.csv(grand.tab, file="../../data/export/c18orf25_phosphosite/phospho_grand_DE.csv", quote=F, row.names = TRUE)
+
+
+
+##############################
+### RUN KINASE ENRICHMENT  ###
+##############################
+
+# Execute workflow in kinase_enrichment.R
+source("./kinase_enrichment.R")
+
+
