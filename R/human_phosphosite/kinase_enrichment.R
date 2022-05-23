@@ -99,5 +99,5 @@ dev.off()
 
 
 # Export heatmap data
-write.table(mat1, file="../../data/export/human_phosphosite/heatmap_post_pre_v2.txt", sep="\t", quote=F)
-write.table(mat2, file="../../data/export/human_phosphosite/heatmap_reco_pre_v2.txt", sep="\t", quote=F)
+write.table(mat1, file="../../data/export/human_phosphosite/heatmap_post_pre_v2.txt", sep="\t", quote=F, col.names=NA)
+write.table(mat2, file="../../data/export/human_phosphosite/heatmap_reco_pre_v2.txt", sep="\t", quote=F, col.names=NA)

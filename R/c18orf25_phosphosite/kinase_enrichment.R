@@ -54,8 +54,17 @@ perturbPlot2d_edit <- function(Tc, annotation, minSize=5, ...) {
 
 z1 <- perturbPlot2d_edit(Tc=Tc[,c(1,2)], annotation=PhosR:::PhosphoSite.mouse, xlim=c(-5, 6), ylim=c(-4,4), main="Kinase perturbation analysis")
 
-
 # Export Figure
 svglite::svglite(filename = "../../data/export/c18orf25_phosphosite/kinase_enrichment_WTstim_con_vs_KOstim_con.svg", width = 4.2, height = 4)
 perturbPlot2d_edit(Tc=Tc[,c(1,2)], annotation=PhosR:::PhosphoSite.mouse, xlim=c(-5, 6), ylim=c(-4,4), main="Kinase perturbation analysis")
 dev.off()
+
+# create data for heatmap
+mat1 <- do.call(rbind, z1)
+colnames(mat1) <- gsub(".Z1", "", names(z1$Z1))
+rownames(mat1) <- colnames(Tc[,c(1,2)])
+
+# Export heatmap data
+write.table(mat1, file="../../data/export/c18orf25_phosphosite/heatmap_WTstim_con_vs_KOstim_con.txt", sep="\t", quote=F, col.names=NA)
+
+
