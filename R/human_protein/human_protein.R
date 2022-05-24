@@ -1,11 +1,5 @@
 # Human protein analysis
 
-# Description:
-
-# Data generated:
-# Figure XX, XX, XX, XX
-# Table xx, xx
-
 
 ##############
 ### SETUP  ###
@@ -149,8 +143,3 @@ dev.off()
 svglite::svglite(filename = "../../data/export/human_protein/pca_after.svg", width = 5.5, height = 4)
 pcaPlot_shapes(prot.rba, col=rep(c(rep(c("Endurance"), 3), rep(c("Sprint"), 3), rep(c("Resistance"), 3)), 8), shape=rep(c("Pre", "Post", "Recovery"), 24), labels=gsub("Subject\\d_", "", colnames(prot.scale)))
 dev.off()
-
-# Remove c* objects
-rm(list = ls(pattern = '^c[0-9].*'))
-rm(lf, cm, fit, corfit3, tab, design, o)
-

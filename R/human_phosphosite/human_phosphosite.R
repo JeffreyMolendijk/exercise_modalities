@@ -1,11 +1,5 @@
 # Human phosphosite analysis
 
-# Description:
-
-# Data generated:
-# Figure XX, XX, XX, XX
-# Table xx, xx
-
 
 ##############
 ### SETUP  ###
@@ -15,7 +9,6 @@
 library(tidyverse)
 library(PhosR)
 library(limma)
-library(funscoR)
 library(WGCNA)
 library(ggpubr)
 library(forecast)
@@ -69,7 +62,6 @@ for(i in 1:8){
 
 # Combine internal standard subtracted data back into a matrix
 phospho.exp <- do.call(cbind, phospho.exp)
-
 
 
 ############################
@@ -161,9 +153,6 @@ svglite::svglite(filename = "../../data/export/human_phosphosite/pca_after.svg",
 pcaPlot_shapes(phospho.rba, col=rep(c(rep(c("Endurance"), 3), rep(c("Sprint"), 3), rep(c("Resistance"), 3)), 8), shape=rep(c("Pre", "Post", "Recovery"), 24), labels=gsub("Subject\\d_", "", colnames(phospho.scale)))
 dev.off()
 
-# Remove c* objects
-rm(list = ls(pattern = '^c[0-9].*'))
-rm(lf, cm, fit, corfit3, tab, design, o)
 
 
 
@@ -189,6 +178,3 @@ source("./phosphosite_trait_correlation.R")
 
 # Execute workflow in kinase_enrichment.R
 source("./kinase_enrichment.R")
-
-
-

@@ -1,11 +1,10 @@
+###################################
+### Load packages and functions ###
+###################################
+
 library(directPA)
 library(calibrate)
 library(pheatmap)
-
-## The input is the processed phospho data
-Tc <- as.matrix(grand.tab[, c(1:6)])
-rownames(Tc) <- sapply(strsplit(rownames(Tc), ";"), function(x)paste(x[1], x[2], "", sep=";"))
-##
 
 ## KinasePA function (edited)
 perturbPlot2d_edit <- function(Tc, annotation, minSize=5, ...) {
@@ -52,6 +51,21 @@ perturbPlot2d_edit <- function(Tc, annotation, minSize=5, ...) {
   return(result)
 }
 
+
+
+#####################
+### Load data     ###
+#####################
+
+# Input data: limma differential expression results
+Tc <- as.matrix(grand.tab[, c(1:6)])
+rownames(Tc) <- sapply(strsplit(rownames(Tc), ";"), function(x)paste(x[1], x[2], "", sep=";"))
+
+
+##########################
+### Generate plots     ###
+##########################
+
 z1 <- perturbPlot2d_edit(Tc=Tc[,c(1,2)], annotation=PhosphoSite.human,
                          xlim=c(-5, 6), ylim=c(-4,4), main="Kinase perturbation analysis")
 
@@ -67,18 +81,19 @@ Zs1 <- perturbPlot3d(Tc=Tc[,c(1,3,5)], annotation=PhosphoSite.human,
 Zs2 <- perturbPlot3d(Tc=Tc[,c(2,4,6)], annotation=PhosphoSite.human,
                      size=10, main="Kinase perturbation analysis")
 
-# create heatmap
+# Create tables for heatmaps
 mat1 <- do.call(rbind, Zs1)
 colnames(mat1) <- gsub(".Z1", "", names(z1$Z1))
 rownames(mat1) <- colnames(Tc[,c(1,3,5)])
-pheatmap(mat1, cluster_rows = FALSE, cluster_cols = TRUE, fontsize=7)
 
 mat2 <- do.call(rbind, Zs2)
 colnames(mat2) <- gsub(".Z1", "", names(z1$Z1))
 rownames(mat2) <- colnames(Tc[,c(2,4,6)])
-pheatmap(mat2, cluster_rows = FALSE, cluster_cols = TRUE, fontsize=7)
 
 
+##########################
+### Export results     ###
+##########################
 
 # Export Figures
 svglite::svglite(filename = "../../data/export/human_phosphosite/kinase_enrichment_endurance.svg", width = 4.2, height = 4)
