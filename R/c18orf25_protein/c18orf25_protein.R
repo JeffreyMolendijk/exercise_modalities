@@ -21,10 +21,10 @@ library(clusterProfiler)
 prot <- read.delim("../../data/input/c18orf25_protein.txt", head=TRUE)
 prot <- prot[!grepl("REV_|CON_", prot$Protein.IDs), ]
 
-
 Ids <- prot %>% select(Protein.IDs, Gene.names)
 
 prot <- prot %>% select(contains("Tibialis"))
+
 prot[prot == 0] <- NA
 
 Ids <- Ids[apply(is.na(prot), 1, sum) == 0, ]

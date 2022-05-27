@@ -66,7 +66,7 @@ prot.exp <- do.call(cbind, prot.exp)
 # Define experimental groups
 grps <- gsub(".+_", "", colnames(prot.exp))
 
-# Perform filtering to retain sites measured in >3/8 Subjects in at least 1 treatment group
+# Perform filtering to retain proteins measured in >3/8 Subjects in at least 1 treatment group
 prot.filtered <- selectGrps(prot.exp, grps, percent = (3/8), n=1)
 
 # Median scaling

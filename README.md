@@ -15,6 +15,8 @@ Code repository for the manuscript:
 
 Each of the named folders contains the scripts required to replicate different sections of the analysis (human phosphoproteomics, human proteomics, c18orf25 knockout phosphoproteomics and c18orf25 knockout proteomics). To locate the scripts of interest, please refer to the folder structure below.
 
+> Note: In the human experiments, the exercise modality *Strength* is referred to as *Resistance* in the manuscript.
+
 <br>
 
 ## Folder structure
