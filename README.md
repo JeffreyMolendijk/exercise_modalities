@@ -116,7 +116,8 @@ exercise_modalities
 
 ## Citation
 
-> <cite>[Phosphoproteomics of three exercise modalities identifies canonical signaling and C18ORF25 as an AMPK substrate regulating skeletal muscle function](https://www.sciencedirect.com/science/article/pii/S1550413122003023)</cite>
+> Ronnie Blazev, Christian S. Carl, Yaan-Kit Ng, Jeffrey Molendijk, Christian T. Voldstedlund, Yuanyuan Zhao, Di Xiao, Andrew J. Kueh, Paula M. Miotto, Vanessa R. Haynes, Justin P. Hardee, Jin D. Chung, James W. McNamara, Hongwei Qian, Paul Gregorevic, Jonathan S. Oakhill, Marco J. Herold, Thomas E. Jensen, Leszek Lisowski, Gordon S. Lynch, Garron T. Dodd, Matthew J. Watt, Pengyi Yang, Bente Kiens, Erik A. Richter, Benjamin L. Parker (2022). Phosphoproteomics of three exercise modalities identifies canonical signaling and C18ORF25 as an AMPK substrate regulating skeletal muscle function. Cell Metabolism, Volume 34, Issue 10.
+> [https://doi.org/10.1016/j.cmet.2022.07.003](https://doi.org/10.1016/j.cmet.2022.07.003)
 
 <br>
 
